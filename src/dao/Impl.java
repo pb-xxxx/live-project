@@ -48,6 +48,13 @@ public class Impl implements UserDAO {
 			return true;
 		}
     }
+   
+    public void addList(User user,List<User> users)//把用户添加进列表，设置编号预约成功set置1
+    {
+        users.add(user);
+        user.setSet();
+        user.setId(users.size());
+    }
     public boolean isList(User user,List<User> users)//查询预约列表判断是否可预约
     {
         for(User Users:users)
@@ -56,12 +63,6 @@ public class Impl implements UserDAO {
                 return false;
         }
         return true;
-    }
-    public void addList(User user,List<User> users)//把用户添加进列表，设置编号预约成功set置1
-    {
-        users.add(user);
-        user.setSet();
-        user.setId(users.size());
     }
     public List<User> select(List<User> users,int nums)//选出中签的用户列表
     {
