@@ -4,6 +4,14 @@ public class User {
     private String name,tel,ID;
     private int num,id;
     private int order ,set;//ID身份证，id预约编号，order中标之后还有几轮可以再预约，set本轮是否已经预约
+    User(String name,String tel,String ID,int num)
+    {
+        this.name = name;
+        this.tel = tel;
+        this.ID = ID;
+        this.num = num;
+        this.set = 1;
+    }
     public String getName(){
         return name;
     }
