@@ -9,5 +9,5 @@ public interface UserDAO {
     List<User> select(List<User> users,int nums);//选出中签的用户列表,nums为口罩总量;
     boolean add(List<User> users);//把中签的用户添加进数据库
     void end();//数据库里order-1；
-    boolean isMatch(int id);//查询是否中奖
+    boolean isMatch(int id,List<User> users);//输入id与中奖名单查询是否中奖
 }

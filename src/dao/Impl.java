@@ -11,9 +11,9 @@ public class Impl implements UserDAO {
     }
     public boolean isList(User user,List<User> users)//查询预约列表判断是否可预约
     {
-        for(User User:users)
+        for(User Users:users)
         {
-            if(user.getID().equals(User.getID())||user.getTel().equals(User.getTel()))
+            if(user.getID().equals(Users.getID())||user.getTel().equals(Users.getTel()))
                 return false;
         }
         return true;
@@ -53,8 +53,13 @@ public class Impl implements UserDAO {
     {
 
     }
-    public boolean isMatch(int id)//查询是否中奖
+    public boolean isMatch(int id,List<User> users)//查询是否中奖
     {
-
+        for(User user:users)
+        {
+            if(user.getId()==id)
+                return true;
+        }
+        return false;
     }
 }
