@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约口罩</title>
+    <script type="text/javascript">
+        function main()
+        {
+            var a=document.getElementById("name");
+            a.setAttribute("disabled","disabled");
+            var b=document.getElementById("id");
+            b.setAttribute("disabled","disabled");
+            var c=document.getElementById("phone");
+            c.setAttribute("disabled","disabled");
+            var d=document.getElementById("count");
+            d.setAttribute("disabled","disabled");
+            var e=document.getElementById("submit");
+            e.setAttribute("disabled","disabled");
+        }
+
+    </script>
+</head>
+<body>
+    <form class="form_count" action="UserServlet" method="POST">
+        总口罩数量：<input type="text" name="count_all" id="count_all" placeholder="输入格式：1-300" />
+        <input type="submit" value="提交" id="submit_all">
+        <br><br>
+    </form>
+    <form class="form" action="date.jsp" method="POST" >
+        真实姓名: <input type="text" name="user_name" id="name" placeholder="输入格式：张三" />
+        <br><br>
+        身份证号: <input type="text" name="user_id" id="id" placeholder="输入格式：xxxx..." />
+        <br><br>
+        手机号: <input type="text" name="user_phone" id="phone" placeholder="输入格式：1xxx..." />
+        <br><br>
+        预约口罩数量：<select name="count" id="count">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            </select>
+            <br><br>
+        <input type="submit" value="提交" id="submit">
+        <button id="end" type="button" onclick="location.reload();">开始预约</button>
+            <button id="end" type="button" onclick="main()">结束预约</button>
+            <a href="query.jsp"><button id="input" type="button">中签查询</button></a>
+            <button id="input" type="button">管理员登录</button>
+    </form>
+</body>
+</html>
