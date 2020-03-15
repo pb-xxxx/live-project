@@ -48,7 +48,7 @@ public class Impl implements UserDAO {
 			return true;
 		}
     }
-   
+
     public void addList(User user,List<User> users)//把用户添加进列表，设置编号预约成功set置1
     {
         users.add(user);
