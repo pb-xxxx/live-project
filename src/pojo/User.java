@@ -3,7 +3,14 @@ package pojo;
 public class User {
     private String name,tel,ID;
     private int num,Id;
-    private int order,set;//ID身份证，id预约编号，order中标之后还有几轮可以再预约，set本轮是否已经预约
+    private int order = 0,set = 0;//ID身份证，id预约编号，order中标之后还有几轮可以再预约，set本轮是否已经预约
+    User(String name,String tel,String ID,int num)
+    {
+        this.name = name;
+        this.tel = tel;
+        this.ID = ID;
+        this.num = num;
+    }
     public String getName(){
         return name;
     }
@@ -34,7 +41,7 @@ public class User {
     public void setOrder(){
         this.order = 3;
     }
-    public int getSet(int set){
+    public int getSet(){
         return set;
     }
     public void setSet(){

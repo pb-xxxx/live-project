@@ -52,7 +52,7 @@ public class Impl implements UserDAO {
     {
         for(User Users:users)
         {
-            if(user.getID().equals(Users.getID())||user.getTel().equals(Users.getTel()))
+            if(user.getID().equals(Users.getID())||user.getTel().equals(Users.getTel())||Users.getSet()==1)
                 return false;
         }
         return true;
@@ -78,6 +78,7 @@ public class Impl implements UserDAO {
             else
             {
                 hash.add(users.get(id));
+                users.get(id).setOrder();
                 num = num+users.get(id).getNum();
             }
         }
