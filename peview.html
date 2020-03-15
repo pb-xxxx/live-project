@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>预约口罩</title>
-    
+    <script type="text/javascript">
+        function main()
+        {
+            var a=document.getElementById("name");
+            a.setAttribute("disabled","disabled");
+            var b=document.getElementById("id");
+            b.setAttribute("disabled","disabled");
+            var c=document.getElementById("phone");
+            c.setAttribute("disabled","disabled");
+            var d=document.getElementById("count");
+            d.setAttribute("disabled","disabled");
+            var e=document.getElementById("submit");
+            e.setAttribute("disabled","disabled");
+        }
+
+    </script>
 </head>
 <body>
     <form class="form_count" action="date.jsp" method="POST">
@@ -26,6 +41,10 @@
             </select>
             <br><br>
         <input type="submit" value="提交" id="submit">
+        <button id="end" type="button" onclick="location.reload();">开始预约</button>
+            <button id="end" type="button" onclick="main()">结束预约</button>
+            <button id="input" type="button"><a href="ha.html">中签查询</a></button>
+            <button id="input" type="button">管理员登录</button>
     </form>
 </body>
 </html>
